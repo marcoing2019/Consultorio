@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseProject;
+using DatabaseProject.Tablas;
 
 namespace CONSULTORIO
 {
@@ -28,5 +30,14 @@ namespace CONSULTORIO
             usuario.Show();
 
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var persona = DatabaseCrud.GetAll<Persona>().Where(x => x.Clave == textBox2.Text && x.Usuario == textBox1.Text).FirstOrDefault();
+			if (persona == null)
+				MessageBox.Show("Usuario no encontrado!");
+			else
+				MessageBox.Show("Usuario Encontrado");
+		}
+	}
 }
