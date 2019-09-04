@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject.Tablas
 {
-	public class Persona : BaseEntity
-	{
-
+	public class Persona 
+	{ 
+		[PrimaryKeyAttribute]
+		public int Id { get; set; }
 		public string Nombre { get; set; }
 		public string Apellido { get; set; }
 		public string Clave { get; set; }

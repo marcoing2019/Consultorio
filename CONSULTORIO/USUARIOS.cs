@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DatabaseProject.Repository;
+using DatabaseProject.Tablas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +23,28 @@ namespace CONSULTORIO
         {
             this.Close();
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			IRepository<Persona> repo = new Repository<Persona>();
+			try
+			{
+				var reusultado = repo.Agregar(
+					new Persona {
+					Apellido = txtApellidos.Text,
+					Clave = txtClave.Text,
+					Nombre = txtNombre.Text,
+					Usuario = txtUsuario.Text,
+				});
+				if (reusultado > 0)
+					MessageBox.Show("Usuario creado");
+				else
+					MessageBox.Show("Usuario No ha podido ser creado");
+			}
+			catch(Exception error)
+			{
+				MessageBox.Show("Usuario creado "+ error.Message);
+			}
+		}
+	}
 }

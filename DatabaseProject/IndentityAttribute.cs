@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject
 {
-	public class IndentityAttribute : Attribute
+	
+
+	public class PrimaryKeyAttribute : Attribute
 	{
 	}
 }
