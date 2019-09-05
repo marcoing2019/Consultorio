@@ -208,7 +208,7 @@ namespace Ejemplos
 				
 					using (var commando = new SQLiteCommand(query.ToString(), conexion))
 					{
-						commando.Parameters.AddWithValue("@Id", textBoxID.Text);
+					
 						conexion.Open();
 
 						SQLiteDataAdapter da = new SQLiteDataAdapter();
