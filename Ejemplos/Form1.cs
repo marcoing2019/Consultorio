@@ -27,7 +27,7 @@ namespace Ejemplos
 				{
 					var query = new StringBuilder();
 					query.Append(" INSERT INTO MITABLA ");
-					query.Append("(Nombre,,Appellidos)");
+					query.Append("(Nombre,Appellidos)");
 					query.Append("VALUES(@Appellidos,@Nombre);");
 					using (var commando = new SQLiteCommand(query.ToString(),conexion))
 					{
