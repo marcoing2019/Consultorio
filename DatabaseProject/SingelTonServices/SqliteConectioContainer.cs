@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject.SingelTonServices
 {
+	
 	public class SQLiteConectador
 	{
 		private static string DefualtConnectionString = "Data Source=mydb.db;Version=3;";
@@ -16,7 +17,9 @@ namespace DatabaseProject.SingelTonServices
 		{
 			get
 			{
-			
+				if (_con != null)
+					Cerrar();
+
 				_con = new SQLiteConnection(DefualtConnectionString);
 				return _con;
 			}

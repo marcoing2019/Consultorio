@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 namespace DatabaseProject.Repository
 {
-	public class Repository<T> : IRepository<T>
+	public class Repository<T>  : IRepository<T>  where T : class
 	{
 		public int Actulizar(T entity, string tabla =null)
 		{

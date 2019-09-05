@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseProject.Repository
 {
-	public interface IRepository<T>
+	public interface IRepository<T> where T : class
 	{
 		/// <summary>
 		///Este metodo es usado para crear un simple crud de crear

@@ -38,7 +38,7 @@ namespace CONSULTORIO
 			var persona = repo.SelecionarTodo().Where(x => x.Clave == textBox2.Text && x.Usuario == textBox1.Text).FirstOrDefault();
 	
 			if (persona == null)
-				MessageBox.Show("Usuario Encontrado");
+				MessageBox.Show("Usuario No Encontrado");
 			else
 				new USUARIOS().Show();
 			

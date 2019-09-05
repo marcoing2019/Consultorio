@@ -8,7 +8,7 @@ namespace DatabaseProject.Tablas
 {
 	public class Persona 
 	{ 
-		[PrimaryKeyAttribute]
+		[PrimaryKey]
 		public int Id { get; set; }
 		public string Nombre { get; set; }
 		public string Apellido { get; set; }

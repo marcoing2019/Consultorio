@@ -26,6 +26,10 @@ namespace CONSULTORIO
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			// mira la carpeta ejemplos de uso 
+			//simpre importa estas dos cosas si va a usar repositorios 
+			//using DatabaseProject.Repository;
+			//using DatabaseProject.Tablas;
 			IRepository<Persona> repo = new Repository<Persona>();
 			try
 			{
@@ -43,7 +47,7 @@ namespace CONSULTORIO
 			}
 			catch(Exception error)
 			{
-				MessageBox.Show("Usuario creado "+ error.Message);
+				MessageBox.Show("Usuario No ha podido ser creado"+error.Message);
 			}
 		}
 	}
