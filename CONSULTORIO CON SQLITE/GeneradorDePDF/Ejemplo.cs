@@ -11,7 +11,10 @@ namespace CONSULTORIO_CON_SQLITE.GeneradorDePDF
 	{
 		public Ejemplo()
 		{
+			// esto es un datagridview de ejemplo 
 			var DatagridView1 = new DataGridView();
+
+
 			// asi inicias los componentes basicos
 			GeneradorDePDF.PDF pdf = new GeneradorDePDF.PDF
 			{
