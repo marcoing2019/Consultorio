@@ -4,10 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Pechkin;
 
 namespace CONSULTORIO_CON_SQLITE.GeneradorDePDF
 {
+	
 	public class Encabezado
 	{
 		public string Titulo { get; set; }
@@ -44,13 +46,46 @@ namespace CONSULTORIO_CON_SQLITE.GeneradorDePDF
 		}
 		public bool GuardarPF(string ruta)
 		{
-			return ByteArrayToFile(ruta, GenerarPDFBytes());
+			return ByteArrayToFile(ruta, GenerarPDFBytes(this.ToString()));
 		}
+		public bool GuardarPF(DataGridView dataGrid, string ruta)
+		{
+			return ByteArrayToFile(ruta, GenerarPDFBytes(DataGridtoHTML(dataGrid).ToString()));
+		}
+		private StringBuilder DataGridtoHTML(DataGridView dg)
+		{
+			StringBuilder strB = new StringBuilder();
+			//create html & table
+			strB.AppendLine("<html><body><center><" +
+						  "table border='1' cellpadding='0' cellspacing='0'>");
+			strB.AppendLine("<tr>");
+			//cteate table header
+			for (int i = 0; i < dg.Columns.Count; i++)
+			{
+				strB.AppendLine("<td align='center' valign='middle'>" +
+							   dg.Columns[i].HeaderText + "</td>");
+			}
+			//create table body
+			strB.AppendLine("<tr>");
+			for (int i = 0; i < dg.Rows.Count; i++)
+			{
+				strB.AppendLine("<tr>");
+				foreach (DataGridViewCell dgvc in dg.Rows[i].Cells)
+				{
+					strB.AppendLine("<td align='center' valign='middle'>" +
+									dgvc.Value.ToString() + "</td>");
+				}
+				strB.AppendLine("</tr>");
 
-		public byte[] GenerarPDFBytes()
+			}
+			//table footer & end of html file
+			strB.AppendLine("</table></center></body></html>");
+			return strB;
+		}
+		public byte[] GenerarPDFBytes(string content)
 		{
 
-			byte[] pdfContent = new SimplePechkin(new GlobalConfig()).Convert(this.ToString());
+			byte[] pdfContent = new SimplePechkin(new GlobalConfig()).Convert(content);
 			return pdfContent;
 		}
 		private string ParserHeaderBodyFooter()

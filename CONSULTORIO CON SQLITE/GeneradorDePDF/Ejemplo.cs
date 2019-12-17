@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CONSULTORIO_CON_SQLITE.GeneradorDePDF
 {
@@ -10,6 +11,7 @@ namespace CONSULTORIO_CON_SQLITE.GeneradorDePDF
 	{
 		public Ejemplo()
 		{
+			var DatagridView1 = new DataGridView();
 			// asi inicias los componentes basicos
 			GeneradorDePDF.PDF pdf = new GeneradorDePDF.PDF
 			{
@@ -35,6 +37,12 @@ namespace CONSULTORIO_CON_SQLITE.GeneradorDePDF
 
 			// aqui escribes la ruta  deonde deseas guadrar esto es un ejemplo tiene que terminar con .pdf
 			pdf.GuardarPF(@"C:\Users\Documents\holamundo.pdf");
+
+			// o si deaseas convetir un datagradidview a pdf 
+			pdf.GuardarPF(DatagridView1, @"C:\Users\Documents\holamundo.pdf");
+
+
+
 		}
 	}
 }
