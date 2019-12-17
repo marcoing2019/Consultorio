@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.IO;
 //using WkHtmlToPdf;
 
 namespace CONSULTORIO_CON_SQLITE
@@ -100,8 +101,10 @@ namespace CONSULTORIO_CON_SQLITE
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			GeneradorDePDF.PDF pdf = new GeneradorDePDF.PDF();
+				pdf.GuardarPF(dataGridView1,Path.Combine(Environment.GetFolderPath( Environment.SpecialFolder.Desktop),"myraporte.pdf"));
 			//WkHtmlToPdf.PdfGenerator gen = new PdfGenerator();
-			
+
 		}
 	}
 
