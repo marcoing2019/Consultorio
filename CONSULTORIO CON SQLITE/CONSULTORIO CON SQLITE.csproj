@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFFE7775-182F-4EB5-A7BE-A24199B1D3BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CONSULTORIO_CON_SQLITE</RootNamespace>
+    <AssemblyName>CONSULTORIO CON SQLITE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ISC  AP MARCOS\Desktop\Nueva carpeta %282%29\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5DC8686A6B45454E7269CB7DD78CB03C2C7136D1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CONSULTORIO CON SQLITE_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.2.1.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Pechkin, Version=0.5.8.1, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Pechkin.0.5.8.1\lib\net40\Pechkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Pechkin.Synchronized, Version=0.5.8.1, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Pechkin.Synchronized.0.5.8.1\lib\net40\Pechkin.Synchronized.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AGENDADECITAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGENDADECITAS.Designer.cs">
+      <DependentUpon>AGENDADECITAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGENDAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGENDAR.Designer.cs">
+      <DependentUpon>AGENDAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALMACEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ALMACEN.Designer.cs">
+      <DependentUpon>ALMACEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALTAFARMACIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ALTAFARMACIA.Designer.cs">
+      <DependentUpon>ALTAFARMACIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALTAS PACIENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ALTAS PACIENTES.Designer.cs">
+      <DependentUpon>ALTAS PACIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSPORFECHA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSPORFECHA.Designer.cs">
+      <DependentUpon>BUSPORFECHA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSQUEDAGENERAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSQUEDAGENERAL.Designer.cs">
+      <DependentUpon>BUSQUEDAGENERAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONSULTAINTERNA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONSULTAINTERNA.Designer.cs">
+      <DependentUpon>CONSULTAINTERNA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONSULTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONSULTAS.Designer.cs">
+      <DependentUpon>CONSULTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSCAPACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSCAPACI.Designer.cs">
+      <DependentUpon>BUSCAPACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLAVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLAVE.Designer.cs">
+      <DependentUpon>CLAVE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXION.cs" />
+    <Compile Include="DATOSPACIENTES.cs" />
+    <Compile Include="DIRECTORIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIRECTORIO.Designer.cs">
+      <DependentUpon>DIRECTORIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FARMACIAMENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FARMACIAMENU.Designer.cs">
+      <DependentUpon>FARMACIAMENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneradorDePDF\Ejemplo.cs" />
+    <Compile Include="GeneradorDePDF\HtmlTemplates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HtmlTemplates.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneradorDePDF\PDF.cs" />
+    <Compile Include="IMPRIMIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IMPRIMIR.Designer.cs">
+      <DependentUpon>IMPRIMIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMEPACI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INFORMEPACI.Designer.cs">
+      <DependentUpon>INFORMEPACI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTASDEPACIENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LISTASDEPACIENTES.Designer.cs">
+      <DependentUpon>LISTASDEPACIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MEDICAMENTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MEDICAMENTO.Designer.cs">
+      <DependentUpon>MEDICAMENTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU.Designer.cs">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REPORTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES.Designer.cs">
+      <DependentUpon>REPORTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepositorioImagen.cs" />
+    <Compile Include="RESETA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RESETA.Designer.cs">
+      <DependentUpon>RESETA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingelTonSQLConection.cs" />
+    <Compile Include="USUARIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="USUARIOS.Designer.cs">
+      <DependentUpon>USUARIOS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AGENDADECITAS.resx">
+      <DependentUpon>AGENDADECITAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGENDAR.resx">
+      <DependentUpon>AGENDAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALMACEN.resx">
+      <DependentUpon>ALMACEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALTAFARMACIA.resx">
+      <DependentUpon>ALTAFARMACIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALTAS PACIENTES.resx">
+      <DependentUpon>ALTAS PACIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSCAPACI.resx">
+      <DependentUpon>BUSCAPACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSPORFECHA.resx">
+      <DependentUpon>BUSPORFECHA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSQUEDAGENERAL.resx">
+      <DependentUpon>BUSQUEDAGENERAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLAVE.resx">
+      <DependentUpon>CLAVE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONSULTAINTERNA.resx">
+      <DependentUpon>CONSULTAINTERNA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONSULTAS.resx">
+      <DependentUpon>CONSULTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIRECTORIO.resx">
+      <DependentUpon>DIRECTORIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FARMACIAMENU.resx">
+      <DependentUpon>FARMACIAMENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneradorDePDF\HtmlTemplates.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HtmlTemplates.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMPRIMIR.resx">
+      <DependentUpon>IMPRIMIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INFORMEPACI.resx">
+      <DependentUpon>INFORMEPACI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LISTASDEPACIENTES.resx">
+      <DependentUpon>LISTASDEPACIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MEDICAMENTO.resx">
+      <DependentUpon>MEDICAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU.resx">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="REPORTES.resx">
+      <DependentUpon>REPORTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RESETA.resx">
+      <DependentUpon>RESETA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USUARIOS.resx">
+      <DependentUpon>USUARIOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CONSULTORIO CON SQLITE_ClaveTemporal.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario_admon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1570151859217.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\APP-SALUD-480x300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1570152114485.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buskeda mundial.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_sheduled-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg-41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15701521144851.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiarescoba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_59534697-stock-illustration-delete-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENTRAR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar 56.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libeay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libgcc_s_dw2-1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mingwm10.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ssleay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wkhtmltox0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
